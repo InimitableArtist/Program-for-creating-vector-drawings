@@ -4,8 +4,8 @@ from point import Point
 from geometryUtil import GeometryUtil
 class LineSegment(AbstractGraphicalObject):
     
-    def init(self,linp1=Point(0,0),linp2=Point(10,0)):
-        #vidi kaj ces  s pozivanjem super()
+    def __init__(self, linp1 = Point(0, 0), linp2 = Point(10, 0)):
+        super().init([rightP, bottP])
         self.linp1 = linp1
         self.linp2 = linp2
         return
@@ -14,7 +14,7 @@ class LineSegment(AbstractGraphicalObject):
         return  GeometryUtil.distanceFromLineSegment(self.linp1,self.linp2,mousePoint)
     
     def getBoundingBoxy(self):
-        
+
         width = abs(self.linp1.getX() - self.linp2.getX())
         height = abs(self.linp1.getY() - self.linp2.getY())
         centerX = (self.linp1.getX() + self.linp2.getX())/2
