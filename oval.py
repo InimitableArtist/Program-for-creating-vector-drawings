@@ -6,9 +6,9 @@ from geometryUtil import GeometryUtil
 
 class Oval(AbstractGraphicalObject):
     
-    def init(self,rightP=Point(10,0),bottP=Point(0,10)):
-        super().init([rightP,bottP])
-        self.center = Point(bottP.getX(),rightP.getY())
+    def init(self, rightP = Point(10, 0), bottP = Point(0, 10)):
+        super().init([rightP, bottP])
+        self.center = Point(bottP.getX(), rightP.getY())
         return
     
     def selectionDistance(self,mousePoint):
